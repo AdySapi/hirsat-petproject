@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Layout from './Layout';
 
 function Achievements() {
     return (
-        <div>Achievements</div>
+        <Layout>
+            <div>Achievements</div>
+        </Layout>
     )
 }
 

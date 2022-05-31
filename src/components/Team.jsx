@@ -1,22 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react';
+import Layout from './Layout';
 
-function Team() {
+function Team({ team }) {
 
-    const [team, setTeam] = useState([]);
+    const { name, dob, pob, height, weight, shoes, number, position } = team
 
-    const fetchTeamData = async _ => {
-        const response = await fetch("http://www.testdomain.com/v1/api/teamdata");
-        const responseJSON = await response.json();
-        console.log(responseJSON)
-        setTeam(responseJSON)
-    };
 
-    useEffect(() => {
-        fetchTeamData();
-    }, [])
 
     return (
-        <div>Team</div>
+        <Layout>
+            <div></div>
+        </Layout>
     )
 }
 
