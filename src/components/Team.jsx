@@ -7,17 +7,12 @@ function Team({ team }) {
     const [input, setInput] = useState("");
 
 
-    const teamMembers = team.map((teamMember, index) => (<Membercard info={teamMember} key={index} />))
-
-
-
-
-
     return (
         <Layout>
             <div>
-                <input type="text" value={input} onChange={({ target }) => { setInput(target.value); }} />
-                {teamMembers}
+                <input type="text" placeholder="Search..." value={input} onChange={({ target }) => { setInput(target.value); }} />
+                {team.map((teamMember, index) => teamMember.name.toLowerCase().includes(input.toLowerCase()) && (<Membercard info={teamMember} key={index} />))
+                }
             </div>
         </Layout>
     )
