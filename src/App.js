@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Home from './components/Home';
-import Team from './components/Team';
+import Home from './components/Home/Home';
+import Team from './components/Team/Team';
 import Gallery from './components/Gallery';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';

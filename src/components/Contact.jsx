@@ -5,6 +5,7 @@ function Contact() {
     return (
         <Layout>
             <div>Contact</div>
+
         </Layout>
     )
 }

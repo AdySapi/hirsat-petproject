@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Layout from './Layout';
+import Layout from '../Layout';
 import Membercard from './Membercard'
 
 function Team({ team }) {
