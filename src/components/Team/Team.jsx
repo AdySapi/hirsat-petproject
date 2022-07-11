@@ -9,10 +9,12 @@ function Team({ team }) {
 
     return (
         <Layout>
-            <div>
+            <div className="cardLayout">
                 <input type="text" placeholder="Search..." value={input} onChange={({ target }) => { setInput(target.value); }} />
-                {team.map((teamMember, index) => teamMember.name.toLowerCase().includes(input.toLowerCase()) && (<Membercard info={teamMember} key={index} />))
-                }
+                <div className="cards">
+                    {team.map((teamMember, index) => teamMember.name.toLowerCase().includes(input.toLowerCase()) && (<Membercard info={teamMember} key={index} />))
+                    }
+                </div>
             </div>
         </Layout>
     )
